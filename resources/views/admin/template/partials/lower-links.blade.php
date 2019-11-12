@@ -12,3 +12,5 @@
 <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
 
 <script src="{!! asset('admin/js/custom.js') !!}"></script>
+
+@yield('javascripts')

@@ -17,8 +17,9 @@
                     <tr>
                         <th width="10">#</th>
                         <th>Name</th>
-                        <th>Emil</th>
+                        <th>Email</th>
                         <th>Courses</th>
+                        <th colspan="2">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,6 +37,15 @@
                             @foreach ($student->courses as $course)
                                 <span class="badge badge-info">{!! $course->name !!} </span>
                             @endforeach
+                        </td>
+                        <td>
+                            <a href="{{ url('students/'. $student->id . '/edit') }}" class="btn btn-info btn-sm" >Edit</a>
+                        </td>
+                        <td>
+                            {!! Form::open(['method' => 'DELETE', 'url' => 'students/'.$student->id, 'id'=>'deleteForm']) !!} 
+                            {!! Form::submit('Delete',['class'=>'btn btn-danger btn-sm']) !!} 
+                            {!! Form::close() !!} 
+
                         </td>
                     </tr>
                     @endforeach

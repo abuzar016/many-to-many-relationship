@@ -23,6 +23,7 @@
         </div>
     </nav>
 
+    @include('admin.template.partials.session') 
 
     @yield('main-content')
 
