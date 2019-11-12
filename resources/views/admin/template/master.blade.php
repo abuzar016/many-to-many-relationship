@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    @include('admin.template.partials.upper-links')
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="{!! url('/') !!}">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <a class="nav-item nav-link" href="{!! url('students') !!}">Students</a>
+                    <a class="nav-item nav-link" href="{!! url('courses') !!}">Courses</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    @yield('main-content')
+
+
+    @include('admin.template.partials.lower-links')
+</body>
+
+</html>
